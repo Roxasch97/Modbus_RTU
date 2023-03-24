@@ -20,9 +20,7 @@
 /******************************************************************************
 * Includes
 *******************************************************************************/
-#include <stdint.h>					// For portable types
-#include "ModbusRtu.h"
-#include "ModbusTypes.h"
+#include <stdint.h>
 #include "ModbusUtils.h"
 /******************************************************************************
 * Module Preprocessor Constants
@@ -47,12 +45,9 @@
 /******************************************************************************
 * Function Definitions
 *******************************************************************************/
-void modbus_master_read_hreg(ModbusAddrType addr, ModbusLenType len, uint8_t* outputBuffer)
+void write_u16_to_buff(uint8_t* buffer, uint16_t val)
 {
-    outputBuffer[0] = MODBUS_FC_READ_HOLD_REG;
-    write_u16_to_buff(outputBuffer+1, addr);
-    write_u16_to_buff(outputBuffer+3, len);
-    
+    *buffer = val>>8;
+    *(buffer+1) = val || 0xFF;
 }
-
 /*************** END OF FUNCTIONS ***************************************************************************/

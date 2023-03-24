@@ -54,7 +54,7 @@
 #ifdef __cplusplus
 extern "C"{
 #endif
-void modbusMasterReadHreg(ModbusAddrType addr, ModbusLenType len);
+void modbus_master_read_hreg(ModbusAddrType addr, ModbusLenType len, uint8_t* outputBuffer);
 
 #ifdef __cplusplus
 } // extern "C"

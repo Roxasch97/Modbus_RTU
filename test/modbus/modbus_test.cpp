@@ -11,24 +11,26 @@ class ModbusTest : public testing::Test
 
     void SetUp() override
     {
-
+        memset(outputBuffer, 0, sizeof(uint8_t)*MODBUS_BUF_LEN);
     }
 
     void TearDown() override
     {
 
     }
-
+    uint8_t outputBuffer[MODBUS_BUF_LEN];
 };
 
-TEST(ModbusTest, FirstTest)
+TEST_F(ModbusTest, readHregTest)
 {
     ModbusAddrType addr = 0x01;
     ModbusLenType len = 1;
 
-    modbusMasterReadHreg(addr,len);
+    modbus_master_read_hreg(addr,len,outputBuffer);
 
-    FAIL() << "Implement your test!";
+    ASSERT_EQ(MODBUS_FC_READ_HOLD_REG, outputBuffer[0]);
+    ASSERT_EQ(addr, outputBuffer[1] << 8 | outputBuffer[2]);
+    ASSERT_EQ(len, outputBuffer[3] << 8 | outputBuffer[4]);
 }
 
 }

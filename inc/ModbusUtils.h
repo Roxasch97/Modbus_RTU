@@ -1,58 +1,66 @@
-/*******************************************************************************
-* Title                 :   System Initialization
-* Filename              :   sys_init.c
+/****************************************************************************
+* Title                 :   ADC Application   
+* Filename              :   adc_app.h
 * Author                :   JWB
-* Origin Date           :   04/23/2012
+* Origin Date           :   06/07/2012
 * Version               :   1.0.0
 * Compiler              :   Microchip C30 v3.30c
 * Target                :   PIC24FJ64GB004
 * Notes                 :   None
-*******************************************************************************/
-/*************** MODULE REVISION LOG ******************************************
+*****************************************************************************/
+/*************** INTERFACE CHANGE LIST **************************************
 *
 *    Date    Software Version    Initials   Description 
-*  XX/XX/XX    XXXXXXXXXXX         JWB      Module Created.
+*  08/17/13    XXXXXXXXXXX         JWB      Interface Created.
 *
-*******************************************************************************/
-/** \file XXX.c
- * \brief This module contains the 
+*****************************************************************************/
+/** \file tsk.h
+ *  \brief This module contains continuous tasks.
+ * 
+ *  This is the header file for the definition for tasks that are continuous
+ *  and should be ran as often as possible.
  */
+#ifndef MODBUS_UTILS_H_
+#define MODBUS_UTILS_H_
+
 /******************************************************************************
 * Includes
 *******************************************************************************/
-#include <stdint.h>					// For portable types
-#include "ModbusRtu.h"
 #include "ModbusTypes.h"
-#include "ModbusUtils.h"
+
 /******************************************************************************
-* Module Preprocessor Constants
+* Preprocessor Constants
 *******************************************************************************/
 
 /******************************************************************************
-* Module Preprocessor Macros
+* Configuration Constants
 *******************************************************************************/
 
 /******************************************************************************
-* Module Typedefs
+* Macros
+*******************************************************************************/
+	
+/******************************************************************************
+* Typedefs
 *******************************************************************************/
 
 /******************************************************************************
-* Module Variable Definitions
+* Variables
 *******************************************************************************/
 
 /******************************************************************************
 * Function Prototypes
 *******************************************************************************/
+#ifdef __cplusplus
+extern "C"{
+#endif
 
-/******************************************************************************
-* Function Definitions
-*******************************************************************************/
-void modbus_master_read_hreg(ModbusAddrType addr, ModbusLenType len, uint8_t* outputBuffer)
-{
-    outputBuffer[0] = MODBUS_FC_READ_HOLD_REG;
-    write_u16_to_buff(outputBuffer+1, addr);
-    write_u16_to_buff(outputBuffer+3, len);
-    
-}
+void write_u16_to_buff(uint8_t* buffer, uint16_t val);
 
-/*************** END OF FUNCTIONS ***************************************************************************/
+#ifdef __cplusplus
+} // extern "C"
+#endif
+
+#endif /*MODBUS_RTU_H_*/
+
+/*** End of File **************************************************************/
