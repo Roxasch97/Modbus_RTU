@@ -33,4 +33,15 @@ TEST_F(ModbusTest, readHregTest)
     ASSERT_EQ(len, outputBuffer[3] << 8 | outputBuffer[4]);
 }
 
+TEST_F(ModbusTest, readCoilsTest)
+{
+    ModbusAddrType addr = 0x01;
+    ModbusLenType len = 1;
+
+    modbus_master_read_coils(addr,len,outputBuffer);
+
+    ASSERT_EQ(MODBUS_FC_READ_COILS, outputBuffer[0]);
+    ASSERT_EQ(addr, outputBuffer[1] << 8 | outputBuffer[2]);
+    ASSERT_EQ(len, outputBuffer[3] << 8 | outputBuffer[4]);
+}
 }

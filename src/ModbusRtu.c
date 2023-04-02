@@ -52,7 +52,13 @@ void modbus_master_read_hreg(ModbusAddrType addr, ModbusLenType len, uint8_t* ou
     outputBuffer[0] = MODBUS_FC_READ_HOLD_REG;
     write_u16_to_buff(outputBuffer+1, addr);
     write_u16_to_buff(outputBuffer+3, len);
-    
+}
+
+void modbus_master_read_coils(ModbusAddrType addr, ModbusLenType len, uint8_t* outputBuffer)
+{
+    outputBuffer[0] = MODBUS_FC_READ_COILS;
+    write_u16_to_buff(outputBuffer+1, addr);
+    write_u16_to_buff(outputBuffer+3, len);
 }
 
 /*************** END OF FUNCTIONS ***************************************************************************/
