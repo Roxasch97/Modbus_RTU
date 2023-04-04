@@ -44,4 +44,16 @@ TEST_F(ModbusTest, readCoilsTest)
     ASSERT_EQ(addr, outputBuffer[1] << 8 | outputBuffer[2]);
     ASSERT_EQ(len, outputBuffer[3] << 8 | outputBuffer[4]);
 }
+
+TEST_F(ModbusTest, readDiscreteIn)
+{
+    ModbusAddrType addr = 0x01;
+    ModbusLenType len = 1;
+
+    modbus_master_read_discrete_in(addr,len,outputBuffer);
+
+    ASSERT_EQ(MODBUS_FC_READ_DISCRETE_IN, outputBuffer[0]);
+    ASSERT_EQ(addr, outputBuffer[1] << 8 | outputBuffer[2]);
+    ASSERT_EQ(len, outputBuffer[3] << 8 | outputBuffer[4]);
+}
 }

@@ -61,4 +61,11 @@ void modbus_master_read_coils(ModbusAddrType addr, ModbusLenType len, uint8_t* o
     write_u16_to_buff(outputBuffer+3, len);
 }
 
+void modbus_master_read_discrete_in(ModbusAddrType addr, ModbusLenType len, uint8_t* outputBuffer)
+{
+    outputBuffer[0] = MODBUS_FC_READ_DISCRETE_IN;
+    write_u16_to_buff(outputBuffer+1, addr);
+    write_u16_to_buff(outputBuffer+3, len);
+}
+
 /*************** END OF FUNCTIONS ***************************************************************************/

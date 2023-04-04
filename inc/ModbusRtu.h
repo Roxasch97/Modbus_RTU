@@ -57,6 +57,7 @@ extern "C"{
 
 void modbus_master_read_hreg(ModbusAddrType addr, ModbusLenType len, uint8_t* outputBuffer);
 void modbus_master_read_coils(ModbusAddrType addr, ModbusLenType len, uint8_t* outputBuffer);
+void modbus_master_read_discrete_in(ModbusAddrType addr, ModbusLenType len, uint8_t* outputBuffer);
 
 #ifdef __cplusplus
 } // extern "C"
