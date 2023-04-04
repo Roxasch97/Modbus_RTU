@@ -69,4 +69,9 @@ void modbus_master_read_hreg(uint16_t addr, uint16_t len, uint8_t* outputBuffer)
     modbus_master_create_frame(addr, len, outputBuffer, MODBUS_FC_READ_HOLD_REG);
 }
 
+void modbus_master_read_in_reg(uint16_t addr, uint16_t len, uint8_t* outputBuffer)
+{
+    modbus_master_create_frame(addr, len, outputBuffer, MODBUS_FC_READ_IN_REG);
+}
+
 /*************** END OF FUNCTIONS ***************************************************************************/

@@ -57,4 +57,17 @@ TEST_F(ModbusTest, readDiscreteIn)
     ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
     ASSERT_EQ(len, read_u16_from_buff(outputBuffer+3));
 }
+
+TEST_F(ModbusTest, readInReg)
+{
+    uint16_t addr = 0x01;
+    uint16_t len = 1;
+
+    modbus_master_read_in_reg(addr,len,outputBuffer);
+
+    ASSERT_EQ(MODBUS_FC_READ_IN_REG, outputBuffer[0]);
+    ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
+    ASSERT_EQ(len, read_u16_from_buff(outputBuffer+3));
+}
+
 }
