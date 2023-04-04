@@ -57,6 +57,14 @@ typedef enum ModbusFunctionCode
 
 } ModbusFunctionCode;
 
+typedef enum CoilValue
+{
+
+    MODBUS_COIL_OFF = 0x0000,
+    MODBUS_COIL_ON = 0xFF00,
+
+} CoilValue;
+
 typedef struct
 {
     ModbusFunctionCode funCode;

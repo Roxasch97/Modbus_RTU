@@ -74,4 +74,8 @@ void modbus_master_read_in_reg(uint16_t addr, uint16_t len, uint8_t* outputBuffe
     modbus_master_create_frame(addr, len, outputBuffer, MODBUS_FC_READ_IN_REG);
 }
 
+void modbus_master_write_s_coil(uint16_t addr, CoilValue coilVal, uint8_t* outputBuffer)
+{
+    modbus_master_create_frame(addr, coilVal, outputBuffer, MODBUS_FC_WRITE_S_COIL);
+}
 /*************** END OF FUNCTIONS ***************************************************************************/

@@ -60,6 +60,8 @@ void modbus_master_read_coils(uint16_t addr, uint16_t len, uint8_t* outputBuffer
 void modbus_master_read_discrete_in(uint16_t addr, uint16_t len, uint8_t* outputBuffer);
 void modbus_master_read_in_reg(uint16_t addr, uint16_t len, uint8_t* outputBuffer);
 
+void modbus_master_write_s_coil(uint16_t addr, CoilValue coilVal, uint8_t* outputBuffer);
+
 #ifdef __cplusplus
 } // extern "C"
 #endif

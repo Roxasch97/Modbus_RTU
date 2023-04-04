@@ -70,4 +70,26 @@ TEST_F(ModbusTest, readInReg)
     ASSERT_EQ(len, read_u16_from_buff(outputBuffer+3));
 }
 
+TEST_F(ModbusTest, writeSingleCoilOn)
+{
+    uint16_t addr = 0x01;
+    
+    modbus_master_write_s_coil(addr, MODBUS_COIL_ON, outputBuffer);
+
+    ASSERT_EQ(MODBUS_FC_WRITE_S_COIL, outputBuffer[0]);
+    ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
+    ASSERT_EQ(MODBUS_COIL_ON, read_u16_from_buff(outputBuffer+3));
+}
+
+TEST_F(ModbusTest, writeSingleCoilOFF)
+{
+    uint16_t addr = 0x01;
+    
+    modbus_master_write_s_coil(addr, MODBUS_COIL_OFF, outputBuffer);
+
+    ASSERT_EQ(MODBUS_FC_WRITE_S_COIL, outputBuffer[0]);
+    ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
+    ASSERT_EQ(MODBUS_COIL_OFF, read_u16_from_buff(outputBuffer+3));
+}
+
 }
