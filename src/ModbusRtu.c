@@ -47,25 +47,26 @@
 /******************************************************************************
 * Function Definitions
 *******************************************************************************/
-void modbus_master_read_hreg(ModbusAddrType addr, ModbusLenType len, uint8_t* outputBuffer)
+void modbus_master_create_frame(uint16_t addr, uint16_t len_val, uint8_t* outputBuffer, ModbusFunctionCode funCode)
 {
-    outputBuffer[0] = MODBUS_FC_READ_HOLD_REG;
+    outputBuffer[0] = funCode;
     write_u16_to_buff(outputBuffer+1, addr);
-    write_u16_to_buff(outputBuffer+3, len);
+    write_u16_to_buff(outputBuffer+3, len_val);
 }
 
-void modbus_master_read_coils(ModbusAddrType addr, ModbusLenType len, uint8_t* outputBuffer)
+void modbus_master_read_coils(uint16_t addr, uint16_t len, uint8_t* outputBuffer)
 {
-    outputBuffer[0] = MODBUS_FC_READ_COILS;
-    write_u16_to_buff(outputBuffer+1, addr);
-    write_u16_to_buff(outputBuffer+3, len);
+    modbus_master_create_frame(addr, len, outputBuffer, MODBUS_FC_READ_COILS);
 }
 
-void modbus_master_read_discrete_in(ModbusAddrType addr, ModbusLenType len, uint8_t* outputBuffer)
+void modbus_master_read_discrete_in(uint16_t addr, uint16_t len, uint8_t* outputBuffer)
 {
-    outputBuffer[0] = MODBUS_FC_READ_DISCRETE_IN;
-    write_u16_to_buff(outputBuffer+1, addr);
-    write_u16_to_buff(outputBuffer+3, len);
+    modbus_master_create_frame(addr, len, outputBuffer, MODBUS_FC_READ_DISCRETE_IN);
+}
+
+void modbus_master_read_hreg(uint16_t addr, uint16_t len, uint8_t* outputBuffer)
+{
+    modbus_master_create_frame(addr, len, outputBuffer, MODBUS_FC_READ_HOLD_REG);
 }
 
 /*************** END OF FUNCTIONS ***************************************************************************/

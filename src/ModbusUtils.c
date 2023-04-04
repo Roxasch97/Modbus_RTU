@@ -47,7 +47,12 @@
 *******************************************************************************/
 void write_u16_to_buff(uint8_t* buffer, uint16_t val)
 {
-    *buffer = val>>8;
-    *(buffer+1) = val || 0xFF;
+    buffer[0] = val>>8;
+    buffer[1] = val & 0xFF;
+}
+
+uint16_t read_u16_from_buff(uint8_t* buffer)
+{
+    return buffer[0] << 8 | buffer[1];
 }
 /*************** END OF FUNCTIONS ***************************************************************************/

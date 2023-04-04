@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "ModbusRtu.h"
+#include "ModbusUtils.h"
 
 using testing::Test;
 
@@ -23,37 +24,37 @@ class ModbusTest : public testing::Test
 
 TEST_F(ModbusTest, readHregTest)
 {
-    ModbusAddrType addr = 0x01;
-    ModbusLenType len = 1;
+    uint16_t addr = 0x01;
+    uint16_t len = 1;
 
     modbus_master_read_hreg(addr,len,outputBuffer);
 
     ASSERT_EQ(MODBUS_FC_READ_HOLD_REG, outputBuffer[0]);
-    ASSERT_EQ(addr, outputBuffer[1] << 8 | outputBuffer[2]);
-    ASSERT_EQ(len, outputBuffer[3] << 8 | outputBuffer[4]);
+    ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
+    ASSERT_EQ(len, read_u16_from_buff(outputBuffer+3));
 }
 
 TEST_F(ModbusTest, readCoilsTest)
 {
-    ModbusAddrType addr = 0x01;
-    ModbusLenType len = 1;
+    uint16_t addr = 0x01;
+    uint16_t len = 1;
 
     modbus_master_read_coils(addr,len,outputBuffer);
 
     ASSERT_EQ(MODBUS_FC_READ_COILS, outputBuffer[0]);
-    ASSERT_EQ(addr, outputBuffer[1] << 8 | outputBuffer[2]);
-    ASSERT_EQ(len, outputBuffer[3] << 8 | outputBuffer[4]);
+    ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
+    ASSERT_EQ(len, read_u16_from_buff(outputBuffer+3));
 }
 
 TEST_F(ModbusTest, readDiscreteIn)
 {
-    ModbusAddrType addr = 0x01;
-    ModbusLenType len = 1;
+    uint16_t addr = 0x01;
+    uint16_t len = 1;
 
     modbus_master_read_discrete_in(addr,len,outputBuffer);
 
     ASSERT_EQ(MODBUS_FC_READ_DISCRETE_IN, outputBuffer[0]);
-    ASSERT_EQ(addr, outputBuffer[1] << 8 | outputBuffer[2]);
-    ASSERT_EQ(len, outputBuffer[3] << 8 | outputBuffer[4]);
+    ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
+    ASSERT_EQ(len, read_u16_from_buff(outputBuffer+3));
 }
 }

@@ -42,9 +42,6 @@
 /******************************************************************************
  * Typedefs
  *******************************************************************************/
-typedef uint16_t ModbusAddrType;
-typedef uint16_t ModbusLenType;
-
 typedef enum ModbusFunctionCode
 {
 
@@ -63,14 +60,14 @@ typedef enum ModbusFunctionCode
 typedef struct
 {
     ModbusFunctionCode funCode;
-    ModbusAddrType startAddress;
-    ModbusLenType byteCnt; 
+    uint16_t startAddress;
+    uint16_t byteCnt; 
 } ModbusReadReq;
 
 typedef struct
 {
     ModbusFunctionCode funCode;
-    ModbusLenType byteCnt; 
+    uint16_t byteCnt; 
     uint8_t data[];
 } ModbusReadErr;
 
