@@ -104,4 +104,19 @@ TEST_F(ModbusTest, writeSingleRegister)
     ASSERT_EQ(val, read_u16_from_buff(outputBuffer+3));
 }
 
+TEST_F(ModbusTest, writeMultiCoils)
+{
+    uint16_t addr = 0x01;
+    uint8_t vals[2] = {0xAA, 0xFF};
+    uint16_t quantityOfCoils = 16;
+    
+    modbus_master_write_multi_coils(addr, quantityOfCoils, outputBuffer, vals);
+
+    ASSERT_EQ(MODBUS_FC_WRITE_M_COILS, outputBuffer[0]);
+    ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
+    ASSERT_EQ(quantityOfCoils, read_u16_from_buff(outputBuffer+3));
+    ASSERT_EQ(outputBuffer[6], vals[0]);
+    ASSERT_EQ(outputBuffer[7], vals[1]);
+}
+
 }

@@ -21,6 +21,7 @@
 * Includes
 *******************************************************************************/
 #include <stdint.h>					// For portable types
+#include <math.h>
 #include "ModbusRtu.h"
 #include "ModbusTypes.h"
 #include "ModbusUtils.h"
@@ -47,7 +48,7 @@
 /******************************************************************************
 * Function Definitions
 *******************************************************************************/
-void modbus_master_create_frame(uint16_t addr, uint16_t len_val, uint8_t* outputBuffer, ModbusFunctionCode funCode)
+static void modbus_master_create_frame(uint16_t addr, uint16_t len_val, uint8_t* outputBuffer, ModbusFunctionCode funCode)
 {
     outputBuffer[0] = funCode;
     write_u16_to_buff(outputBuffer+1, addr);
@@ -82,6 +83,17 @@ void modbus_master_write_s_coil(uint16_t addr, CoilValue coilVal, uint8_t* outpu
 void modbus_master_write_s_reg(uint16_t addr, uint16_t val, uint8_t* outputBuffer)
 {
     modbus_master_create_frame(addr, val, outputBuffer, MODBUS_FC_WRITE_S_HREG);
+}
+
+void modbus_master_write_multi_coils(uint16_t addr, uint16_t quantityOfCoils, uint8_t* outputBuffer, const uint8_t* inputBuffer)
+{
+    uint8_t byteCount = ceil(quantityOfCoils/8.0);
+    modbus_master_create_frame(addr, quantityOfCoils, outputBuffer, MODBUS_FC_WRITE_M_COILS);
+    outputBuffer[5] = byteCount;
+    for(int i = 0; i<byteCount; i++)
+    {
+        outputBuffer[6+i] = inputBuffer[i];
+    }
 }
 
 /*************** END OF FUNCTIONS ***************************************************************************/
