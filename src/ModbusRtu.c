@@ -78,4 +78,10 @@ void modbus_master_write_s_coil(uint16_t addr, CoilValue coilVal, uint8_t* outpu
 {
     modbus_master_create_frame(addr, coilVal, outputBuffer, MODBUS_FC_WRITE_S_COIL);
 }
+
+void modbus_master_write_s_reg(uint16_t addr, uint16_t val, uint8_t* outputBuffer)
+{
+    modbus_master_create_frame(addr, val, outputBuffer, MODBUS_FC_WRITE_S_HREG);
+}
+
 /*************** END OF FUNCTIONS ***************************************************************************/

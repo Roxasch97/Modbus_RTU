@@ -92,4 +92,16 @@ TEST_F(ModbusTest, writeSingleCoilOFF)
     ASSERT_EQ(MODBUS_COIL_OFF, read_u16_from_buff(outputBuffer+3));
 }
 
+TEST_F(ModbusTest, writeSingleRegister)
+{
+    uint16_t addr = 0x01;
+    uint16_t val = 0x4B1D;
+    
+    modbus_master_write_s_reg(addr, val, outputBuffer);
+
+    ASSERT_EQ(MODBUS_FC_WRITE_S_HREG, outputBuffer[0]);
+    ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
+    ASSERT_EQ(val, read_u16_from_buff(outputBuffer+3));
+}
+
 }
