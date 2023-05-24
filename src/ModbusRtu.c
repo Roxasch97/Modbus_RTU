@@ -96,4 +96,15 @@ void modbus_master_write_multi_coils(uint16_t addr, uint16_t quantityOfCoils, ui
     }
 }
 
+void modbus_master_write_multi_regs(uint16_t addr, uint16_t quantityOfRegisters, uint8_t* outputBuffer, const uint16_t* inputBuffer)
+{
+    uint8_t byteCount = quantityOfRegisters*2;
+    modbus_master_create_frame(addr, quantityOfRegisters, outputBuffer, MODBUS_FC_WRITE_M_HREG);
+    outputBuffer[5] = byteCount;
+    for(int i = 0; i<quantityOfRegisters; i++)
+    {
+        write_u16_to_buff((outputBuffer+6+(i*2)), inputBuffer[i]);
+    }
+}
+
 /*************** END OF FUNCTIONS ***************************************************************************/

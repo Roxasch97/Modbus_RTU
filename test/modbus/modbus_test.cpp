@@ -117,6 +117,28 @@ TEST_F(ModbusTest, writeMultiCoils)
     ASSERT_EQ(quantityOfCoils, read_u16_from_buff(outputBuffer+3));
     ASSERT_EQ(outputBuffer[6], vals[0]);
     ASSERT_EQ(outputBuffer[7], vals[1]);
+
+    for(int i = 10; i<MODBUS_BUF_LEN; i++)
+    {
+    ASSERT_EQ(outputBuffer[i], 0);
+    }
+}
+
+TEST_F(ModbusTest, writeMultiHregs)
+{
+    uint16_t addr = 0x01;
+    uint16_t vals[2] = {0x4B1D, 0xB4F8};
+    uint16_t quantityOfRegs = 2;
+    uint8_t byteCount = 2*quantityOfRegs;
+    
+    modbus_master_write_multi_regs(addr, quantityOfRegs, outputBuffer, vals);
+
+    ASSERT_EQ(MODBUS_FC_WRITE_M_HREG, outputBuffer[0]);
+    ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
+    ASSERT_EQ(quantityOfRegs, read_u16_from_buff(outputBuffer+3));
+    ASSERT_EQ(byteCount, outputBuffer[5]);
+    ASSERT_EQ(read_u16_from_buff(outputBuffer+6), vals[0]);
+    ASSERT_EQ(read_u16_from_buff(outputBuffer+8), vals[1]);
 }
 
 }
