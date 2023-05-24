@@ -6,7 +6,7 @@ using testing::Test;
 
 namespace {
 
-class ModbusTest : public testing::Test
+class ModbusRequestsTest : public testing::Test
 {
     protected:
 
@@ -22,7 +22,7 @@ class ModbusTest : public testing::Test
     uint8_t outputBuffer[MODBUS_BUF_LEN] = {0};
 };
 
-TEST_F(ModbusTest, readHregTest)
+TEST_F(ModbusRequestsTest, readHregTest)
 {
     uint16_t addr = 0x01;
     uint16_t len = 1;
@@ -39,7 +39,7 @@ TEST_F(ModbusTest, readHregTest)
     }
 }
 
-TEST_F(ModbusTest, readCoilsTest)
+TEST_F(ModbusRequestsTest, readCoilsTest)
 {
     uint16_t addr = 0x01;
     uint16_t len = 1;
@@ -56,7 +56,7 @@ TEST_F(ModbusTest, readCoilsTest)
     }
 }
 
-TEST_F(ModbusTest, readDiscreteIn)
+TEST_F(ModbusRequestsTest, readDiscreteIn)
 {
     uint16_t addr = 0x01;
     uint16_t len = 1;
@@ -73,7 +73,7 @@ TEST_F(ModbusTest, readDiscreteIn)
     }
 }
 
-TEST_F(ModbusTest, readInReg)
+TEST_F(ModbusRequestsTest, readInReg)
 {
     uint16_t addr = 0x01;
     uint16_t len = 1;
@@ -90,7 +90,7 @@ TEST_F(ModbusTest, readInReg)
     }
 }
 
-TEST_F(ModbusTest, writeSingleCoilOn)
+TEST_F(ModbusRequestsTest, writeSingleCoilOn)
 {
     uint16_t addr = 0x01;
     
@@ -106,7 +106,7 @@ TEST_F(ModbusTest, writeSingleCoilOn)
     }
 }
 
-TEST_F(ModbusTest, writeSingleCoilOFF)
+TEST_F(ModbusRequestsTest, writeSingleCoilOFF)
 {
     uint16_t addr = 0x01;
     
@@ -122,7 +122,7 @@ TEST_F(ModbusTest, writeSingleCoilOFF)
     }
 }
 
-TEST_F(ModbusTest, writeSingleRegister)
+TEST_F(ModbusRequestsTest, writeSingleRegister)
 {
     uint16_t addr = 0x01;
     uint16_t val = 0x4B1D;
@@ -139,7 +139,7 @@ TEST_F(ModbusTest, writeSingleRegister)
     }
 }
 
-TEST_F(ModbusTest, writeMultiCoils)
+TEST_F(ModbusRequestsTest, writeMultiCoils)
 {
     uint16_t addr = 0x01;
     uint8_t vals[2] = {0xAA, 0xFF};
@@ -159,7 +159,7 @@ TEST_F(ModbusTest, writeMultiCoils)
     }
 }
 
-TEST_F(ModbusTest, writeMultiHregs)
+TEST_F(ModbusRequestsTest, writeMultiHregs)
 {
     uint16_t addr = 0x01;
     uint16_t vals[2] = {0x4B1D, 0xB4F8};

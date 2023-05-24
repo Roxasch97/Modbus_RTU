@@ -18,7 +18,8 @@ set(SRCS
 )
 
 set(TEST_SRCS
-	modbus_test.cpp
+	modbus_requests_test.cpp
+	modbus_responses_test.cpp
 )
 
 set(GLOBAL_DEFINES
