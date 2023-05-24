@@ -19,7 +19,7 @@ class ModbusTest : public testing::Test
     {
 
     }
-    uint8_t outputBuffer[MODBUS_BUF_LEN];
+    uint8_t outputBuffer[MODBUS_BUF_LEN] = {0};
 };
 
 TEST_F(ModbusTest, readHregTest)
@@ -32,6 +32,11 @@ TEST_F(ModbusTest, readHregTest)
     ASSERT_EQ(MODBUS_FC_READ_HOLD_REG, outputBuffer[0]);
     ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
     ASSERT_EQ(len, read_u16_from_buff(outputBuffer+3));
+    
+    for(int i = 5; i<MODBUS_BUF_LEN; i++)
+    {
+    ASSERT_EQ(outputBuffer[i], 0);
+    }
 }
 
 TEST_F(ModbusTest, readCoilsTest)
@@ -44,6 +49,11 @@ TEST_F(ModbusTest, readCoilsTest)
     ASSERT_EQ(MODBUS_FC_READ_COILS, outputBuffer[0]);
     ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
     ASSERT_EQ(len, read_u16_from_buff(outputBuffer+3));
+
+    for(int i = 5; i<MODBUS_BUF_LEN; i++)
+    {
+    ASSERT_EQ(outputBuffer[i], 0);
+    }
 }
 
 TEST_F(ModbusTest, readDiscreteIn)
@@ -56,6 +66,11 @@ TEST_F(ModbusTest, readDiscreteIn)
     ASSERT_EQ(MODBUS_FC_READ_DISCRETE_IN, outputBuffer[0]);
     ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
     ASSERT_EQ(len, read_u16_from_buff(outputBuffer+3));
+
+    for(int i = 5; i<MODBUS_BUF_LEN; i++)
+    {
+    ASSERT_EQ(outputBuffer[i], 0);
+    }
 }
 
 TEST_F(ModbusTest, readInReg)
@@ -68,6 +83,11 @@ TEST_F(ModbusTest, readInReg)
     ASSERT_EQ(MODBUS_FC_READ_IN_REG, outputBuffer[0]);
     ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
     ASSERT_EQ(len, read_u16_from_buff(outputBuffer+3));
+
+    for(int i = 5; i<MODBUS_BUF_LEN; i++)
+    {
+    ASSERT_EQ(outputBuffer[i], 0);
+    }
 }
 
 TEST_F(ModbusTest, writeSingleCoilOn)
@@ -79,6 +99,11 @@ TEST_F(ModbusTest, writeSingleCoilOn)
     ASSERT_EQ(MODBUS_FC_WRITE_S_COIL, outputBuffer[0]);
     ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
     ASSERT_EQ(MODBUS_COIL_ON, read_u16_from_buff(outputBuffer+3));
+
+    for(int i = 5; i<MODBUS_BUF_LEN; i++)
+    {
+    ASSERT_EQ(outputBuffer[i], 0);
+    }
 }
 
 TEST_F(ModbusTest, writeSingleCoilOFF)
@@ -90,6 +115,11 @@ TEST_F(ModbusTest, writeSingleCoilOFF)
     ASSERT_EQ(MODBUS_FC_WRITE_S_COIL, outputBuffer[0]);
     ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
     ASSERT_EQ(MODBUS_COIL_OFF, read_u16_from_buff(outputBuffer+3));
+
+    for(int i = 5; i<MODBUS_BUF_LEN; i++)
+    {
+    ASSERT_EQ(outputBuffer[i], 0);
+    }
 }
 
 TEST_F(ModbusTest, writeSingleRegister)
@@ -102,6 +132,11 @@ TEST_F(ModbusTest, writeSingleRegister)
     ASSERT_EQ(MODBUS_FC_WRITE_S_HREG, outputBuffer[0]);
     ASSERT_EQ(addr, read_u16_from_buff(outputBuffer+1));
     ASSERT_EQ(val, read_u16_from_buff(outputBuffer+3));
+
+    for(int i = 5; i<MODBUS_BUF_LEN; i++)
+    {
+    ASSERT_EQ(outputBuffer[i], 0);
+    }
 }
 
 TEST_F(ModbusTest, writeMultiCoils)
@@ -139,6 +174,11 @@ TEST_F(ModbusTest, writeMultiHregs)
     ASSERT_EQ(byteCount, outputBuffer[5]);
     ASSERT_EQ(read_u16_from_buff(outputBuffer+6), vals[0]);
     ASSERT_EQ(read_u16_from_buff(outputBuffer+8), vals[1]);
+
+    for(int i = 10; i<MODBUS_BUF_LEN; i++)
+    {
+    ASSERT_EQ(outputBuffer[i], 0);
+    }
 }
 
 }
