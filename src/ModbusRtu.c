@@ -48,7 +48,8 @@
 /******************************************************************************
 * Function Definitions
 *******************************************************************************/
-static void modbus_master_create_frame(uint16_t addr, uint16_t len_val, uint8_t* outputBuffer, ModbusFunctionCode funCode)
+
+static void modbus_create_frame_base(ModbusFunctionCode funCode, uint16_t addr, uint16_t len_val, uint8_t* outputBuffer)
 {
     outputBuffer[0] = funCode;
     write_u16_to_buff(outputBuffer+1, addr);
@@ -57,38 +58,38 @@ static void modbus_master_create_frame(uint16_t addr, uint16_t len_val, uint8_t*
 
 void modbus_master_read_coils(uint16_t addr, uint16_t len, uint8_t* outputBuffer)
 {
-    modbus_master_create_frame(addr, len, outputBuffer, MODBUS_FC_READ_COILS);
+    modbus_create_frame_base(MODBUS_FC_READ_COILS, addr, len, outputBuffer);
 }
 
 void modbus_master_read_discrete_in(uint16_t addr, uint16_t len, uint8_t* outputBuffer)
 {
-    modbus_master_create_frame(addr, len, outputBuffer, MODBUS_FC_READ_DISCRETE_IN);
+    modbus_create_frame_base(MODBUS_FC_READ_DISCRETE_IN, addr, len, outputBuffer);
 }
 
 void modbus_master_read_hreg(uint16_t addr, uint16_t len, uint8_t* outputBuffer)
 {
-    modbus_master_create_frame(addr, len, outputBuffer, MODBUS_FC_READ_HOLD_REG);
+    modbus_create_frame_base(MODBUS_FC_READ_HOLD_REG, addr, len, outputBuffer);
 }
 
 void modbus_master_read_in_reg(uint16_t addr, uint16_t len, uint8_t* outputBuffer)
 {
-    modbus_master_create_frame(addr, len, outputBuffer, MODBUS_FC_READ_IN_REG);
+    modbus_create_frame_base(MODBUS_FC_READ_IN_REG, addr, len, outputBuffer);
 }
 
 void modbus_master_write_s_coil(uint16_t addr, CoilValue coilVal, uint8_t* outputBuffer)
 {
-    modbus_master_create_frame(addr, coilVal, outputBuffer, MODBUS_FC_WRITE_S_COIL);
+    modbus_create_frame_base(MODBUS_FC_WRITE_S_COIL, addr, coilVal, outputBuffer);
 }
 
 void modbus_master_write_s_reg(uint16_t addr, uint16_t val, uint8_t* outputBuffer)
 {
-    modbus_master_create_frame(addr, val, outputBuffer, MODBUS_FC_WRITE_S_HREG);
+    modbus_create_frame_base(MODBUS_FC_WRITE_S_HREG, addr, val, outputBuffer);
 }
 
 void modbus_master_write_multi_coils(uint16_t addr, uint16_t quantityOfCoils, uint8_t* outputBuffer, const uint8_t* inputBuffer)
 {
     uint8_t byteCount = ceil(quantityOfCoils/8.0);
-    modbus_master_create_frame(addr, quantityOfCoils, outputBuffer, MODBUS_FC_WRITE_M_COILS);
+    modbus_create_frame_base(MODBUS_FC_WRITE_M_COILS, addr, quantityOfCoils, outputBuffer);
     outputBuffer[5] = byteCount;
     for(int i = 0; i<byteCount; i++)
     {
@@ -99,7 +100,7 @@ void modbus_master_write_multi_coils(uint16_t addr, uint16_t quantityOfCoils, ui
 void modbus_master_write_multi_regs(uint16_t addr, uint16_t quantityOfRegisters, uint8_t* outputBuffer, const uint16_t* inputBuffer)
 {
     uint8_t byteCount = quantityOfRegisters*2;
-    modbus_master_create_frame(addr, quantityOfRegisters, outputBuffer, MODBUS_FC_WRITE_M_HREG);
+    modbus_create_frame_base(MODBUS_FC_WRITE_M_HREG, addr, quantityOfRegisters, outputBuffer);
     outputBuffer[5] = byteCount;
     for(int i = 0; i<quantityOfRegisters; i++)
     {
