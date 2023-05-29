@@ -65,6 +65,8 @@ void modbus_master_write_s_reg(uint16_t addr, uint16_t val, uint8_t* outputBuffe
 void modbus_master_write_multi_coils(uint16_t addr, uint16_t quantityOfCoils, uint8_t* outputBuffer, const uint8_t* inputBuffer);
 void modbus_master_write_multi_regs(uint16_t addr, uint16_t quantityOfRegisters, uint8_t* outputBuffer, const uint16_t* inputBuffer);
 
+void modbus_slave_read_hreg_resp(const uint8_t* requestBuffer, uint8_t* responseBuffer);
+
 #ifdef __cplusplus
 } // extern "C"
 #endif

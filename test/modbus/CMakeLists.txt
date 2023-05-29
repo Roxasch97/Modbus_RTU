@@ -20,6 +20,7 @@ set(SRCS
 set(TEST_SRCS
 	modbus_requests_test.cpp
 	modbus_responses_test.cpp
+	ModbusIo_mock.cpp
 )
 
 set(GLOBAL_DEFINES
