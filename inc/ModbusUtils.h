@@ -56,7 +56,7 @@ extern "C"{
 #endif
 
 void write_u16_to_buff(uint8_t* buffer, uint16_t val);
-uint16_t read_u16_from_buff(uint8_t* buffer);
+uint16_t read_u16_from_buff(const uint8_t* buffer);
 
 #ifdef __cplusplus
 } // extern "C"
