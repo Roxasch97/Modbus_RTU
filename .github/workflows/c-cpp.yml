@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+    - name: Download packages
+      run: sudo apt-get install -y --no-install-recommends ninja-build
+    - name: Prepare build env
+      run: mkdir out && cd out && cmake -GNinja ..
+    - name: Build tests 
+      run: ninja -C out
+    - name: Run tests
+      run: out/modbus_test
