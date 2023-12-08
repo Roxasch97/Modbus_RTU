@@ -45,41 +45,39 @@
 typedef enum ModbusFunctionCode
 {
 
-    MODBUS_FC_READ_COILS = 0x01,
-    MODBUS_FC_READ_DISCRETE_IN = 0x02,
-    MODBUS_FC_READ_HOLD_REG = 0x03,
-    MODBUS_FC_READ_IN_REG = 0x04,
-    MODBUS_FC_WRITE_S_COIL = 0x05,
-    MODBUS_FC_WRITE_S_HREG  = 0x06,
-    MODBUS_FC_WRITE_M_COILS = 0x0F,
-    MODBUS_FC_WRITE_M_HREG = 0x10,
-    MODBUS_FC_ERR_OFFSET = 0x80,
+  MODBUS_FC_READ_COILS = 0x01,
+  MODBUS_FC_READ_DISCRETE_IN = 0x02,
+  MODBUS_FC_READ_HOLD_REG = 0x03,
+  MODBUS_FC_READ_IN_REG = 0x04,
+  MODBUS_FC_WRITE_S_COIL = 0x05,
+  MODBUS_FC_WRITE_S_HREG = 0x06,
+  MODBUS_FC_WRITE_M_COILS = 0x0F,
+  MODBUS_FC_WRITE_M_HREG = 0x10,
+  MODBUS_FC_ERR_OFFSET = 0x80,
 
 } ModbusFunctionCode;
 
 typedef enum CoilValue
 {
 
-    MODBUS_COIL_OFF = 0x0000,
-    MODBUS_COIL_ON = 0xFF00,
+  MODBUS_COIL_OFF = 0x0000,
+  MODBUS_COIL_ON = 0xFF00,
 
 } CoilValue;
 
 typedef struct
 {
-    ModbusFunctionCode funCode;
-    uint16_t startAddress;
-    uint16_t byteCnt; 
+  ModbusFunctionCode funCode;
+  uint16_t startAddress;
+  uint16_t byteCnt;
 } ModbusReadReq;
 
 typedef struct
 {
-    ModbusFunctionCode funCode;
-    uint16_t byteCnt; 
-    uint8_t data[];
+  ModbusFunctionCode funCode;
+  uint16_t byteCnt;
+  uint8_t data[];
 } ModbusReadErr;
-
-
 
 /******************************************************************************
  * Variables
@@ -99,4 +97,5 @@ extern "C"
 
 #endif /*MODBUS_TYPES_H_*/
 
-/*** End of File **************************************************************/
+/*** End of File
+ * **************************************************************/
