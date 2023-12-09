@@ -18,12 +18,12 @@ set(SRCS
 )
 
 set(clang_dir
-	src/ModbusRtu.c
-	src/ModbusUtils.c
-	inc/ModbusIO.h
-	inc/ModbusRtu.h
-	inc/ModbusTypes.h
-	inc/ModbusUtils.h
+	../src/ModbusRtu.c
+	../src/ModbusUtils.c
+	../inc/ModbusIO.h
+	../inc/ModbusRtu.h
+	../inc/ModbusTypes.h
+	../inc/ModbusUtils.h
 	)
 
 set(TEST_SRCS
@@ -35,6 +35,12 @@ set(TEST_SRCS
 add_custom_target(clang-format
 	COMMAND clang-format -i -style=gnu ${clang_dir}
 	COMMENT "Formatting code with Clang-Format"
+	USES_TERMINAL
+)
+
+add_custom_target(cppcheck
+	COMMAND cd .. && cppcheck --project=out/compile_commands.json --enable=all -i test --suppress=unusedFunction --suppress=missingIncludeSystem
+	COMMENT "Running CppCheck"
 	USES_TERMINAL
 )
 

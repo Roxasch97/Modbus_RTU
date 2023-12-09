@@ -1,391 +1,47 @@
 [
 {
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/cc -I/mnt/f/Modbus/Modbus_RTU/inc -I/mnt/f/Modbus/Modbus_RTU/test/modbus -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -isystem /mnt/f/Modbus/googletest/out/src/googlemock/include -isystem /mnt/f/Modbus/googletest/out/src/googlemock -Wall -Wextra -o CMakeFiles/modbus_test.dir/src/ModbusRtu.c.o -c /mnt/f/Modbus/Modbus_RTU/src/ModbusRtu.c",
-  "file": "/mnt/f/Modbus/Modbus_RTU/src/ModbusRtu.c"
+  "directory": "/home/roxasch/Repos/Modbus_RTU/out",
+  "command": "/usr/bin/cc -I/home/roxasch/Repos/Modbus_RTU/inc -I/home/roxasch/Repos/Modbus_RTU/test/modbus -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock -Wall -Wextra -o CMakeFiles/modbus_test.dir/src/ModbusRtu.c.o -c /home/roxasch/Repos/Modbus_RTU/src/ModbusRtu.c",
+  "file": "/home/roxasch/Repos/Modbus_RTU/src/ModbusRtu.c"
 },
-
 {
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/cc -I/mnt/f/Modbus/Modbus_RTU/inc -I/mnt/f/Modbus/Modbus_RTU/test/modbus -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -isystem /mnt/f/Modbus/googletest/out/src/googlemock/include -isystem /mnt/f/Modbus/googletest/out/src/googlemock -Wall -Wextra -o CMakeFiles/modbus_test.dir/src/ModbusUtils.c.o -c /mnt/f/Modbus/Modbus_RTU/src/ModbusUtils.c",
-  "file": "/mnt/f/Modbus/Modbus_RTU/src/ModbusUtils.c"
+  "directory": "/home/roxasch/Repos/Modbus_RTU/out",
+  "command": "/usr/bin/cc -I/home/roxasch/Repos/Modbus_RTU/inc -I/home/roxasch/Repos/Modbus_RTU/test/modbus -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock -Wall -Wextra -o CMakeFiles/modbus_test.dir/src/ModbusUtils.c.o -c /home/roxasch/Repos/Modbus_RTU/src/ModbusUtils.c",
+  "file": "/home/roxasch/Repos/Modbus_RTU/src/ModbusUtils.c"
 },
-
 {
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/Modbus_RTU/inc -I/mnt/f/Modbus/Modbus_RTU/test/modbus -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -isystem /mnt/f/Modbus/googletest/out/src/googlemock/include -isystem /mnt/f/Modbus/googletest/out/src/googlemock -Wall -Wextra -o CMakeFiles/modbus_test.dir/test/modbus/modbus_requests_test.cpp.o -c /mnt/f/Modbus/Modbus_RTU/test/modbus/modbus_requests_test.cpp",
-  "file": "/mnt/f/Modbus/Modbus_RTU/test/modbus/modbus_requests_test.cpp"
+  "directory": "/home/roxasch/Repos/Modbus_RTU/out",
+  "command": "/usr/bin/c++ -I/home/roxasch/Repos/Modbus_RTU/inc -I/home/roxasch/Repos/Modbus_RTU/test/modbus -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock -Wall -Wextra -o CMakeFiles/modbus_test.dir/test/modbus/modbus_requests_test.cpp.o -c /home/roxasch/Repos/Modbus_RTU/test/modbus/modbus_requests_test.cpp",
+  "file": "/home/roxasch/Repos/Modbus_RTU/test/modbus/modbus_requests_test.cpp"
 },
-
 {
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/Modbus_RTU/inc -I/mnt/f/Modbus/Modbus_RTU/test/modbus -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -isystem /mnt/f/Modbus/googletest/out/src/googlemock/include -isystem /mnt/f/Modbus/googletest/out/src/googlemock -Wall -Wextra -o CMakeFiles/modbus_test.dir/test/modbus/modbus_responses_test.cpp.o -c /mnt/f/Modbus/Modbus_RTU/test/modbus/modbus_responses_test.cpp",
-  "file": "/mnt/f/Modbus/Modbus_RTU/test/modbus/modbus_responses_test.cpp"
+  "directory": "/home/roxasch/Repos/Modbus_RTU/out",
+  "command": "/usr/bin/c++ -I/home/roxasch/Repos/Modbus_RTU/inc -I/home/roxasch/Repos/Modbus_RTU/test/modbus -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock -Wall -Wextra -o CMakeFiles/modbus_test.dir/test/modbus/modbus_responses_test.cpp.o -c /home/roxasch/Repos/Modbus_RTU/test/modbus/modbus_responses_test.cpp",
+  "file": "/home/roxasch/Repos/Modbus_RTU/test/modbus/modbus_responses_test.cpp"
 },
-
 {
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/Modbus_RTU/inc -I/mnt/f/Modbus/Modbus_RTU/test/modbus -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -isystem /mnt/f/Modbus/googletest/out/src/googlemock/include -isystem /mnt/f/Modbus/googletest/out/src/googlemock -Wall -Wextra -o CMakeFiles/modbus_test.dir/test/modbus/ModbusIO_mock.cpp.o -c /mnt/f/Modbus/Modbus_RTU/test/modbus/ModbusIO_mock.cpp",
-  "file": "/mnt/f/Modbus/Modbus_RTU/test/modbus/ModbusIO_mock.cpp"
+  "directory": "/home/roxasch/Repos/Modbus_RTU/out",
+  "command": "/usr/bin/c++ -I/home/roxasch/Repos/Modbus_RTU/inc -I/home/roxasch/Repos/Modbus_RTU/test/modbus -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock -Wall -Wextra -o CMakeFiles/modbus_test.dir/test/modbus/ModbusIO_mock.cpp.o -c /home/roxasch/Repos/Modbus_RTU/test/modbus/ModbusIO_mock.cpp",
+  "file": "/home/roxasch/Repos/Modbus_RTU/test/modbus/ModbusIO_mock.cpp"
 },
-
 {
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -o /mnt/f/Modbus/googletest/out/bin/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /mnt/f/Modbus/googletest/out/src/googlemock/src/gmock-all.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/src/gmock-all.cc"
+  "directory": "/home/roxasch/Repos/Modbus_RTU/out",
+  "command": "/usr/bin/c++ -I/home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock/include -I/home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o ../test/googletest/out/bin/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock/src/gmock-all.cc",
+  "file": "/home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock/src/gmock-all.cc"
 },
-
 {
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -isystem /mnt/f/Modbus/googletest/out/src/googlemock/include -isystem /mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -o /mnt/f/Modbus/googletest/out/bin/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /mnt/f/Modbus/googletest/out/src/googlemock/src/gmock_main.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/src/gmock_main.cc"
+  "directory": "/home/roxasch/Repos/Modbus_RTU/out",
+  "command": "/usr/bin/c++ -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o ../test/googletest/out/bin/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock/src/gmock_main.cc",
+  "file": "/home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googlemock/src/gmock_main.cc"
 },
-
 {
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -o /mnt/f/Modbus/googletest/out/bin/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /mnt/f/Modbus/googletest/out/src/googletest/src/gtest-all.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/src/gtest-all.cc"
+  "directory": "/home/roxasch/Repos/Modbus_RTU/out",
+  "command": "/usr/bin/c++ -I/home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/include -I/home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o ../test/googletest/out/bin/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/src/gtest-all.cc",
+  "file": "/home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/src/gtest-all.cc"
 },
-
 {
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -o /mnt/f/Modbus/googletest/out/bin/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /mnt/f/Modbus/googletest/out/src/googletest/src/gtest_main.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/src/gtest_main.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/cc -I/mnt/f/Modbus/Modbus_RTU/inc -I/mnt/f/Modbus/Modbus_RTU/test/modbus -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -isystem /mnt/f/Modbus/googletest/out/src/googlemock/include -isystem /mnt/f/Modbus/googletest/out/src/googlemock -Wall -Wextra -c /mnt/f/Modbus/Modbus_RTU/inc/ModbusRtu.h",
-  "file": "/mnt/f/Modbus/Modbus_RTU/inc/ModbusRtu.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/cc -I/mnt/f/Modbus/Modbus_RTU/inc -I/mnt/f/Modbus/Modbus_RTU/test/modbus -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -isystem /mnt/f/Modbus/googletest/out/src/googlemock/include -isystem /mnt/f/Modbus/googletest/out/src/googlemock -Wall -Wextra -c /mnt/f/Modbus/Modbus_RTU/inc/ModbusTypes.h",
-  "file": "/mnt/f/Modbus/Modbus_RTU/inc/ModbusTypes.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/cc -I/mnt/f/Modbus/Modbus_RTU/inc -I/mnt/f/Modbus/Modbus_RTU/test/modbus -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -isystem /mnt/f/Modbus/googletest/out/src/googlemock/include -isystem /mnt/f/Modbus/googletest/out/src/googlemock -Wall -Wextra -c /mnt/f/Modbus/Modbus_RTU/inc/ModbusIO.h",
-  "file": "/mnt/f/Modbus/Modbus_RTU/inc/ModbusIO.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/cc -I/mnt/f/Modbus/Modbus_RTU/inc -I/mnt/f/Modbus/Modbus_RTU/test/modbus -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -isystem /mnt/f/Modbus/googletest/out/src/googlemock/include -isystem /mnt/f/Modbus/googletest/out/src/googlemock -Wall -Wextra -c /mnt/f/Modbus/Modbus_RTU/inc/ModbusUtils.h",
-  "file": "/mnt/f/Modbus/Modbus_RTU/inc/ModbusUtils.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/Modbus_RTU/inc -I/mnt/f/Modbus/Modbus_RTU/test/modbus -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -isystem /mnt/f/Modbus/googletest/out/src/googlemock/include -isystem /mnt/f/Modbus/googletest/out/src/googlemock -Wall -Wextra -c /mnt/f/Modbus/Modbus_RTU/test/modbus/ModbusIO_mock.h",
-  "file": "/mnt/f/Modbus/Modbus_RTU/test/modbus/ModbusIO_mock.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-actions.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-actions.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/internal/gmock-internal-utils.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/internal/gmock-internal-utils.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/internal/gmock-port.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/internal/gmock-port.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/internal/custom/gmock-port.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/internal/custom/gmock-port.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/internal/gmock-pp.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/internal/gmock-pp.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-cardinalities.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-cardinalities.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-function-mocker.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-function-mocker.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-spec-builders.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-spec-builders.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-matchers.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-matchers.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/internal/custom/gmock-matchers.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/internal/custom/gmock-matchers.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-more-actions.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-more-actions.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/internal/custom/gmock-generated-actions.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/internal/custom/gmock-generated-actions.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-more-matchers.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-more-matchers.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-nice-strict.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/include/gmock/gmock-nice-strict.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/src/gmock-cardinalities.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/src/gmock-cardinalities.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/src/gmock-internal-utils.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/src/gmock-internal-utils.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/src/gmock-matchers.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/src/gmock-matchers.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/src/gmock-spec-builders.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/src/gmock-spec-builders.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googlemock/include -I/mnt/f/Modbus/googletest/out/src/googlemock -isystem /mnt/f/Modbus/googletest/out/src/googletest/include -isystem /mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googlemock/src/gmock.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googlemock/src/gmock.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-internal.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-internal.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-port.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-port.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/custom/gtest-port.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/custom/gtest-port.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-port-arch.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-port-arch.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-message.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-message.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-filepath.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-filepath.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-string.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-string.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-type-util.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-type-util.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-death-test.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-death-test.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-death-test-internal.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-death-test-internal.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-matchers.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-matchers.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-printers.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-printers.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/custom/gtest-printers.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/custom/gtest-printers.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-param-test.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-param-test.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-param-util.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/gtest-param-util.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-test-part.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-test-part.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest_prod.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest_prod.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-typed-test.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-typed-test.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest_pred_impl.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest_pred_impl.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/src/gtest.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/src/gtest.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/custom/gtest.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/internal/custom/gtest.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-spi.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/include/gtest/gtest-spi.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/src/gtest-internal-inl.h",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/src/gtest-internal-inl.h"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/src/gtest-death-test.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/src/gtest-death-test.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/src/gtest-filepath.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/src/gtest-filepath.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/src/gtest-matchers.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/src/gtest-matchers.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/src/gtest-port.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/src/gtest-port.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/src/gtest-printers.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/src/gtest-printers.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/src/gtest-test-part.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/src/gtest-test-part.cc"
-},
-
-{
-  "directory": "/mnt/f/Modbus/Modbus_RTU/out",
-  "command": "/usr/bin/c++ -I/mnt/f/Modbus/googletest/out/src/googletest/include -I/mnt/f/Modbus/googletest/out/src/googletest -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -c /mnt/f/Modbus/googletest/out/src/googletest/src/gtest-typed-test.cc",
-  "file": "/mnt/f/Modbus/googletest/out/src/googletest/src/gtest-typed-test.cc"
+  "directory": "/home/roxasch/Repos/Modbus_RTU/out",
+  "command": "/usr/bin/c++ -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/include -isystem /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o ../test/googletest/out/bin/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/src/gtest_main.cc",
+  "file": "/home/roxasch/Repos/Modbus_RTU/test/googletest/out/src/googletest/src/gtest_main.cc"
 }
 ]

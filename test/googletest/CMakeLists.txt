@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-set(GTEST_OUT_DIR ${CMAKE_SOURCE_DIR}/../googletest/out)
+set(GTEST_OUT_DIR ${CMAKE_SOURCE_DIR}/test/googletest/out)
 
 include(FetchContent)
 

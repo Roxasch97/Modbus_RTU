@@ -14,10 +14,12 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v3
     - name: Download packages
-      run: sudo apt-get install -y --no-install-recommends ninja-build
+      run: sudo apt-get install -y --no-install-recommends ninja-build cppcheck
     - name: Prepare build env
-      run: mkdir out && cd out && cmake -GNinja ..
+      run: mkdir out && cd out && cmake -GNinja -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
     - name: Build tests 
       run: ninja -C out
     - name: Run tests
       run: out/modbus_test
+    - name: Run cppcheck
+      run: cd out && ninja cppcheck
