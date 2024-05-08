@@ -1,8 +1,12 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.26)
+find_program(CMAKE_C_COMPILER NAMES $ENV{CC} gcc PATHS ENV PATH NO_DEFAULT_PATH)
+find_program(CMAKE_CXX_COMPILER NAMES $ENV{CXX} g++ PATHS ENV PATH NO_DEFAULT_PATH)
 
 project(modbus_test CXX C)
 
 add_subdirectory(test/googletest googletest)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(INCLUDE_DIRS
 	inc
@@ -54,4 +58,3 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${INCLUDE_DIRS} ${TEST_
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE ${GLOBAL_DEFINES})
 target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE -Wall -Wextra)
 target_link_libraries(${CMAKE_PROJECT_NAME} gtest_main gmock)
-
