@@ -2,7 +2,6 @@
 #include "ModbusRtu.h"
 #include "ModbusUtils.h"
 
-using testing::Test;
 
 namespace {
 
