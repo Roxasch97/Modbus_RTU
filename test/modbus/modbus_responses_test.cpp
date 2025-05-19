@@ -1,10 +1,8 @@
 #include "gtest/gtest.h"
-#include "gmock/gmock.h"
 #include "ModbusRtu.h"
 #include "ModbusUtils.h"
 #include "ModbusIO_mock.h"
 
-using testing::Test;
 using ::testing::Return; 
 namespace {
 
@@ -83,6 +81,73 @@ TEST_F(ModbusResponsesTest, readHregTest_multiple)
     {
     ASSERT_EQ(responseBuffer[i], 0);
     }
+}
+
+TEST_F(ModbusResponsesTest, readCoilsTest_single)
+{
+    uint16_t addr = 0x0006;
+    uint16_t len = 1;
+    uint8_t byteCount = 1;
+    ModbusIOMock mock;
+
+    EXPECT_CALL(mock, coil_get(addr))
+        .Times(1)
+        .WillOnce(Return(0x01));
+
+    modbus_io_mock_init(&mock);
+
+    modbus_master_read_coils(addr, len, requestBuffer);
+    modbus_slave_read_coils_resp(requestBuffer, responseBuffer);
+
+    ASSERT_EQ(MODBUS_FC_READ_COILS, responseBuffer[0]);
+    ASSERT_EQ(byteCount, responseBuffer[1]);
+    ASSERT_EQ(responseBuffer[2], 0x01);
+}
+
+TEST_F(ModbusResponsesTest, readCoilsTest_multiple_one_byte)
+{
+    uint16_t addr = 0x0006;
+    uint16_t len = 8;
+    uint8_t byteCount = 1;
+    ModbusIOMock mock;
+
+    for (uint16_t i = 0; i < len; i++) {
+        EXPECT_CALL(mock, coil_get(addr + i))
+            .Times(1)
+            .WillOnce(Return(0x01)); // Example return value
+    }
+        
+    modbus_io_mock_init(&mock);
+
+    modbus_master_read_coils(addr, len, requestBuffer);
+    modbus_slave_read_coils_resp(requestBuffer, responseBuffer);
+
+    ASSERT_EQ(MODBUS_FC_READ_COILS, responseBuffer[0]);
+    ASSERT_EQ(byteCount, responseBuffer[1]);
+    ASSERT_EQ(responseBuffer[2], 0xFF);
+}
+
+TEST_F(ModbusResponsesTest, readCoilsTest_multiple_more_bytes){
+    uint16_t addr = 0x0006;
+    uint16_t len = 10;
+    uint8_t byteCount = 2;
+    ModbusIOMock mock;
+
+    for (uint16_t i = 0; i < len; i++) {
+        EXPECT_CALL(mock, coil_get(addr + i))
+            .Times(1)
+            .WillOnce(Return(0x01)); // Example return value
+    }
+        
+    modbus_io_mock_init(&mock);
+
+    modbus_master_read_coils(addr, len, requestBuffer);
+    modbus_slave_read_coils_resp(requestBuffer, responseBuffer);
+
+    ASSERT_EQ(MODBUS_FC_READ_COILS, responseBuffer[0]);
+    ASSERT_EQ(byteCount, responseBuffer[1]);
+    ASSERT_EQ(responseBuffer[2], 0xFF);
+    ASSERT_EQ(responseBuffer[3], 0x03);
 }
 
 }

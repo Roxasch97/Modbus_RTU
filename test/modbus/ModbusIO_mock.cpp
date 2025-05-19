@@ -16,4 +16,9 @@ extern "C"
         return _mock->hreg_get(hregAddr);
     }
 
+    uint8_t coil_get(uint8_t coilAddr)
+    {
+        return _mock->coil_get(coilAddr);
+    }
+
 }
