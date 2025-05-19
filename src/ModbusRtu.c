@@ -148,7 +148,7 @@ void
 modbus_slave_read_coils_resp (const uint8_t *requestBuffer,
                               uint8_t *responseBuffer)
 {
-  uint8_t quantityOfCoils = read_u16_from_buff (requestBuffer + 3);
+  uint16_t quantityOfCoils = read_u16_from_buff (requestBuffer + 3);
   uint8_t byteCount = ((quantityOfCoils + 7) / 8);
   uint8_t startingAddress = read_u16_from_buff (requestBuffer + 1);
   modbus_slave_create_frame_base (requestBuffer[0], byteCount, responseBuffer);
