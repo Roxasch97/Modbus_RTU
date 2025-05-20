@@ -77,11 +77,12 @@ extern "C"
                                        uint16_t quantityOfRegisters,
                                        uint8_t *outputBuffer,
                                        const uint16_t *inputBuffer);
-
-  void modbus_slave_read_hreg_resp (const uint8_t *requestBuffer,
-                                    uint8_t *responseBuffer);
   void modbus_slave_read_coils_resp (const uint8_t *requestBuffer,
                                      uint8_t *responseBuffer);
+  void modbus_slave_read_discrete_in_resp (const uint8_t *requestBuffer,
+                                           uint8_t *responseBuffer);
+  void modbus_slave_read_hreg_resp (const uint8_t *requestBuffer,
+                                    uint8_t *responseBuffer);
 
 #ifdef __cplusplus
 } // extern "C"

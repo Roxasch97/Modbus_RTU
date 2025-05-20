@@ -150,4 +150,71 @@ TEST_F(ModbusResponsesTest, readCoilsTest_multiple_more_bytes){
     ASSERT_EQ(responseBuffer[3], 0x03);
 }
 
+TEST_F(ModbusResponsesTest, readDinTest_single)
+{
+    uint16_t addr = 0x0002;
+    uint16_t len = 1;
+    uint8_t byteCount = 1;
+    ModbusIOMock mock;
+
+    EXPECT_CALL(mock, digitalIn_get(addr))
+        .Times(1)
+        .WillOnce(Return(0x01));
+
+    modbus_io_mock_init(&mock);
+
+    modbus_master_read_discrete_in(addr, len, requestBuffer);
+    modbus_slave_read_discrete_in_resp(requestBuffer, responseBuffer);
+
+    ASSERT_EQ(MODBUS_FC_READ_DISCRETE_IN, responseBuffer[0]);
+    ASSERT_EQ(byteCount, responseBuffer[1]);
+    ASSERT_EQ(responseBuffer[2], 0x01);
+}
+
+TEST_F(ModbusResponsesTest, readDinTest_multiple_one_byte)
+{
+    uint16_t addr = 0x0002;
+    uint16_t len = 8;
+    uint8_t byteCount = 1;
+    ModbusIOMock mock;
+
+    for (uint16_t i = 0; i < len; i++) {
+        EXPECT_CALL(mock, digitalIn_get(addr + i))
+            .Times(1)
+            .WillOnce(Return(0x01));
+    }
+        
+    modbus_io_mock_init(&mock);
+
+    modbus_master_read_discrete_in(addr, len, requestBuffer);
+    modbus_slave_read_discrete_in_resp(requestBuffer, responseBuffer);
+
+    ASSERT_EQ(MODBUS_FC_READ_DISCRETE_IN, responseBuffer[0]);
+    ASSERT_EQ(byteCount, responseBuffer[1]);
+    ASSERT_EQ(responseBuffer[2], 0xFF);
+}
+
+TEST_F(ModbusResponsesTest, readDinTest_multiple_more_bytes)
+{
+    uint16_t addr = 0x0002;
+    uint16_t len = 10;
+    uint8_t byteCount = 2;
+    ModbusIOMock mock;
+
+    for (uint16_t i = 0; i < len; i++) {
+        EXPECT_CALL(mock, digitalIn_get(addr + i))
+            .Times(1)
+            .WillOnce(Return(0x01));
+    }
+        
+    modbus_io_mock_init(&mock);
+
+    modbus_master_read_discrete_in(addr, len, requestBuffer);
+    modbus_slave_read_discrete_in_resp(requestBuffer, responseBuffer);
+
+    ASSERT_EQ(MODBUS_FC_READ_DISCRETE_IN, responseBuffer[0]);
+    ASSERT_EQ(byteCount, responseBuffer[1]);
+    ASSERT_EQ(responseBuffer[2], 0xFF);
+    ASSERT_EQ(responseBuffer[3], 0x03);
+}
 }

@@ -161,6 +161,22 @@ modbus_slave_read_coils_resp (const uint8_t *requestBuffer,
 }
 
 void
+modbus_slave_read_discrete_in_resp (const uint8_t *requestBuffer,
+                                    uint8_t *responseBuffer)
+{
+  uint16_t quantityOfInputs = read_u16_from_buff (requestBuffer + 3);
+  uint8_t byteCount = ((quantityOfInputs + 7) / 8);
+  uint16_t startingAddress = read_u16_from_buff (requestBuffer + 1);
+  modbus_slave_create_frame_base (requestBuffer[0], byteCount, responseBuffer);
+
+  for (uint16_t i = 0; i < quantityOfInputs; i++)
+    {
+      responseBuffer[RESPONSE_DATA_OFFSET + i / 8]
+          |= digitalIn_get (startingAddress + i) << (i % 8);
+    }
+}
+
+void
 modbus_slave_read_hreg_resp (const uint8_t *requestBuffer,
                              uint8_t *responseBuffer)
 {
