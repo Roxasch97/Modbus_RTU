@@ -21,4 +21,8 @@ extern "C"
         return _mock->coil_get(coilAddr);
     }
 
+    uint16_t digitalIn_get(uint16_t dinAddr)
+    {
+        return _mock->digitalIn_get(dinAddr);
+    }
 }
