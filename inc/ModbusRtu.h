@@ -83,7 +83,6 @@ extern "C"
                                            uint8_t *responseBuffer);
   void modbus_slave_read_hreg_resp (const uint8_t *requestBuffer,
                                     uint8_t *responseBuffer);
-                                     uint8_t *responseBuffer);
 
 #ifdef __cplusplus
 } // extern "C"
