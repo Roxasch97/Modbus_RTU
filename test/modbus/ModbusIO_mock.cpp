@@ -25,4 +25,9 @@ extern "C"
     {
         return _mock->digitalIn_get(dinAddr);
     }
+
+    uint16_t inreg_get(uint16_t inregAddr)
+    {
+        return _mock->inreg_get(inregAddr);
+    }
 }
