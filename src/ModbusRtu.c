@@ -197,8 +197,8 @@ void
 modbus_slave_read_inreg_resp (const uint8_t *requestBuffer,
                               uint8_t *responseBuffer)
 {
-  uint8_t quantityOfRegisters = read_u16_from_buff (requestBuffer + 3);
-  uint8_t byteCount = quantityOfRegisters * 2;
+  uint16_t quantityOfRegisters = read_u16_from_buff (requestBuffer + 3);
+  uint16_t byteCount = quantityOfRegisters * 2;
   uint16_t startingAddress = read_u16_from_buff (requestBuffer + 1);
   modbus_slave_create_frame_base (requestBuffer[0], byteCount, responseBuffer);
 
