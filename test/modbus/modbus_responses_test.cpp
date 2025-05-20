@@ -217,3 +217,4 @@ TEST_F(ModbusResponsesTest, readDinTest_multiple_more_bytes)
     ASSERT_EQ(responseBuffer[2], 0xFF);
     ASSERT_EQ(responseBuffer[3], 0x03);
 }
+}
