@@ -277,3 +277,81 @@ TEST_F(ModbusResponsesTest, readInRegTest_multiple)
     ASSERT_EQ(responseBuffer[i], 0);
     }
 }
+
+TEST_F(ModbusResponsesTest, writeSingleCoilTest)
+{
+    uint16_t addr = 0x0006;
+    CoilValue coilVal = MODBUS_COIL_ON;
+
+    modbus_master_write_s_coil(addr, coilVal, requestBuffer);
+    modbus_slave_write_s_coil_resp(requestBuffer, responseBuffer);
+
+    ASSERT_EQ(MODBUS_FC_WRITE_S_COIL, responseBuffer[0]);
+    ASSERT_EQ(addr, read_u16_from_buff(responseBuffer + 1));
+    ASSERT_EQ(coilVal, read_u16_from_buff(responseBuffer + 3));
+
+    // Check rest of buffer is zero
+    for(int i = 5; i<MODBUS_BUF_LEN; i++)
+    {
+        ASSERT_EQ(responseBuffer[i], 0);
+    }
+}
+
+TEST_F(ModbusResponsesTest, writeSingleRegTest)
+{
+    uint16_t addr = 0x0006;
+    uint16_t regVal = 0x0F0F;
+
+    modbus_master_write_s_reg(addr, regVal, requestBuffer);
+    modbus_slave_write_s_reg_resp(requestBuffer, responseBuffer);
+
+    ASSERT_EQ(MODBUS_FC_WRITE_S_HREG, responseBuffer[0]);
+    ASSERT_EQ(addr, read_u16_from_buff(responseBuffer + 1));
+    ASSERT_EQ(regVal, read_u16_from_buff(responseBuffer + 3));
+
+    // Check rest of buffer is zero
+    for(int i = 5; i<MODBUS_BUF_LEN; i++)
+    {
+        ASSERT_EQ(responseBuffer[i], 0);
+    }
+}
+
+TEST_F(ModbusResponsesTest, writeMultipleCoilsTest)
+{
+    uint16_t addr = 0x0006;
+    uint16_t quantityOfCoils = 10;
+    uint8_t inputBuffer[2] = {0xFF, 0x03}; // 10 coils: 11111111 00000011
+
+    modbus_master_write_multi_coils(addr, quantityOfCoils, requestBuffer, inputBuffer);
+    modbus_slave_write_m_coils_resp(requestBuffer, responseBuffer);
+
+    ASSERT_EQ(MODBUS_FC_WRITE_M_COILS, responseBuffer[0]);
+    ASSERT_EQ(addr, read_u16_from_buff(responseBuffer + 1));
+    ASSERT_EQ(quantityOfCoils, read_u16_from_buff(responseBuffer + 3));
+
+    // Check rest of buffer is zero
+    for(int i = 5; i<MODBUS_BUF_LEN; i++)
+    {
+        ASSERT_EQ(responseBuffer[i], 0);
+    }
+}
+
+TEST_F(ModbusResponsesTest, writeMultipleRegsTest)
+{
+    uint16_t addr = 0x0006;
+    uint16_t quantityOfRegisters = 3;
+    uint16_t inputBuffer[3] = {0x0F0F, 0xFFFF, 0x1234};
+
+    modbus_master_write_multi_regs(addr, quantityOfRegisters, requestBuffer, inputBuffer);
+    modbus_slave_write_m_regs_resp(requestBuffer, responseBuffer);
+
+    ASSERT_EQ(MODBUS_FC_WRITE_M_HREG, responseBuffer[0]);
+    ASSERT_EQ(addr, read_u16_from_buff(responseBuffer + 1));
+    ASSERT_EQ(quantityOfRegisters, read_u16_from_buff(responseBuffer + 3));
+
+    // Check rest of buffer is zero
+    for(int i = 5; i<MODBUS_BUF_LEN; i++)
+    {
+        ASSERT_EQ(responseBuffer[i], 0);
+    }
+}

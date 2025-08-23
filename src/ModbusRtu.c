@@ -210,5 +210,61 @@ modbus_slave_read_inreg_resp (const uint8_t *requestBuffer,
     }
 }
 
+void
+modbus_slave_write_s_coil_resp (const uint8_t *requestBuffer,
+                                uint8_t *responseBuffer)
+{
+  modbus_slave_create_frame_base (requestBuffer[0], 0, responseBuffer);
+  write_u16_to_buff (responseBuffer + 1,
+                     read_u16_from_buff (requestBuffer + 1));
+  write_u16_to_buff (responseBuffer + 3,
+                     read_u16_from_buff (requestBuffer + 3));
+  
+  // coil_set(read_u16_from_buff (requestBuffer + 1), read_u16_from_buff (requestBuffer + 3));
+}
+
+void
+modbus_slave_write_s_reg_resp (const uint8_t *requestBuffer,
+                               uint8_t *responseBuffer)
+{
+  modbus_slave_create_frame_base (requestBuffer[0], 0, responseBuffer);
+  write_u16_to_buff (responseBuffer + 1,
+                     read_u16_from_buff (requestBuffer + 1));
+  write_u16_to_buff (responseBuffer + 3,
+                     read_u16_from_buff (requestBuffer + 3));
+
+  //hreg_set(read_u16_from_buff (requestBuffer + 1), read_u16_from_buff (requestBuffer + 3));
+}
+
+void
+modbus_slave_write_m_coils_resp (const uint8_t *requestBuffer,
+                                 uint8_t *responseBuffer)
+{
+  modbus_slave_create_frame_base (requestBuffer[0], 0, responseBuffer);
+  write_u16_to_buff (responseBuffer + 1,
+                     read_u16_from_buff (requestBuffer + 1));
+  write_u16_to_buff (responseBuffer + 3,
+                     read_u16_from_buff (requestBuffer + 3));
+
+  
+}
+void
+modbus_slave_write_m_regs_resp (const uint8_t *requestBuffer,
+                                uint8_t *responseBuffer)
+{
+  modbus_slave_create_frame_base (requestBuffer[0], 0, responseBuffer);
+  write_u16_to_buff (responseBuffer + 1,
+                     read_u16_from_buff (requestBuffer + 1));
+  write_u16_to_buff (responseBuffer + 3,
+                     read_u16_from_buff (requestBuffer + 3));
+  
+  uint16_t StartingAddress = read_u16_from_buff (requestBuffer + 1);
+  uint16_t QuantityOfRegisters = read_u16_from_buff (requestBuffer + 3);
+  // for (int i = 0; i < QuantityOfRegisters; i++)
+  //   {
+  //     hreg_set(StartingAddress + i, read_u16_from_buff (requestBuffer + 6 + (i * 2)));
+  //   }
+}
+
 /*************** END OF FUNCTIONS
  * ***************************************************************************/

@@ -85,6 +85,14 @@ extern "C"
                                     uint8_t *responseBuffer);
   void modbus_slave_read_inreg_resp (const uint8_t *requestBuffer,
                                      uint8_t *responseBuffer);
+  void modbus_slave_write_s_coil_resp (const uint8_t *requestBuffer,
+                                       uint8_t *responseBuffer);
+  void modbus_slave_write_s_reg_resp (const uint8_t *requestBuffer,
+                                      uint8_t *responseBuffer);
+  void modbus_slave_write_m_coils_resp (const uint8_t *requestBuffer,
+                                        uint8_t *responseBuffer);
+  void modbus_slave_write_m_regs_resp (const uint8_t *requestBuffer,
+                                       uint8_t *responseBuffer);
 
 #ifdef __cplusplus
 } // extern "C"
